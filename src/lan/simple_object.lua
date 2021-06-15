@@ -8,7 +8,7 @@ function a.hellow(self, name)
     print("-------------------")
 end
 
-function say(self, content)
+local function say(self, content)
     -- body
     print(self.name..": "..content)
 end

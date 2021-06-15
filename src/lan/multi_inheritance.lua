@@ -5,7 +5,7 @@ local function search (k, plist)
     end
 end
 
-function createClass (...)
+local function createClass (...)
     local c = {} -- new class
     local parents = {...} -- list of parents
     

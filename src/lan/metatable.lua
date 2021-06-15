@@ -1,4 +1,4 @@
-function add_func(a, b)
+local function add_func(a, b)
     local c = {}
     local index = 1
     for k,v in ipairs(a) do
