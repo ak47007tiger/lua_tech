@@ -64,13 +64,13 @@ function Class.class(className, ...)
         local obj = {}
         local objAddress = tostring(obj)
 
-        local function objTostring()
+        local function objToString()
             return string.format("obj %s @%s", objAddress, classObj.className)
         end
 
         setmetatable(obj, {
             __index = classObj,
-            __tostring = objTostring,
+            __tostring = objToString,
         })
 
         obj:build(...)
