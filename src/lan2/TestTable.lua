@@ -47,5 +47,34 @@ local function Test3()
     print(#t3)
 end
 
-Test2()
-Test3()
+local function Test4()
+    local t1 = {0}
+    local t2 = {}
+    t2[0] = 1
+    t2[1] = 1
+    print(#t2)
+    print(t2[1])
+end
+
+local function Test5()
+
+    local t1 = {}
+    table.insert(t1, 1)
+    table.insert(t1, 2)
+    table.insert(t1, 3)
+    --t1[2] = nil
+    print(#t1)
+    for i = 1, #t1 do
+        if i == 2 then
+            --t1[i] = nil
+            table.remove(t1, 2)
+        else
+            print(i, t1[i])
+        end
+    end
+    print(#t1)
+    --table.remove(t1, 2)
+    --print(#t1)
+end
+
+Test5()

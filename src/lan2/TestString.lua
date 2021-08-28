@@ -4,16 +4,39 @@
 --- DateTime: 2021/5/10 18:10
 ---
 
-print("abs" == "abs")
+local function Test1()
+    print("abs" == "abs")
 
-local strContent = "abs"
+    local strContent = "abs"
 
-print(string.len(strContent))
-print(string.byte(strContent,0,3))
-local byteContent = string.byte(strContent,0,3)
-print(type(byteContent))
+    print(string.len(strContent))
+    print(string.byte(strContent,0,3))
+    local byteContent = string.byte(strContent,0,3)
+    print(type(byteContent))
 
-print("end")
+    print("end")
 
-print("hello")
-print(true)
+    print("hello")
+    print(true)
+
+end
+
+local function Test2()
+
+    local str = "a,b,c,d,e,f,g"
+    for w in str:gmatch("([^,]+),?") do print(w) end
+
+    print("---------------")
+
+    str = "a,b,c,d,e,f,g"
+    for w in str:gmatch("([^,]+)") do print(w) end
+
+end
+
+
+local str = "aasdf"
+for w in str:gmatch("([^,]+)") do print(w) end
+
+local c10 = string.char(10)
+print(c10, c10 == '\n')
+print('a')
